@@ -24,10 +24,22 @@ export class AppComponent implements OnInit {
   }
 
   calculate(inp: number | string) {
+    const n = typeof inp === 'number' ? inp : parseInt(inp, 10);
+    
+    if (!n){
+      alert('Please enter a number.');
+      return;
+    }
+
+    if (n < 1 ){
+      alert('Please enter a positive number.');
+      return;
+    }
+    
     this.calculating.set(true);
 
+
     setTimeout(() => {
-      const n = typeof inp === 'number' ? inp : parseInt(inp, 10);
       const jsTimeStart = performance.now();
       let f = 0;
       for (let i = 0; i < 10_000_000; i++) {
