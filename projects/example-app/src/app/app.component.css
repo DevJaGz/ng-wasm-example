@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+
+  input {
+    width: 10em;
+    padding: 0.75em;
+  }
+
+  button {
+    padding: 0.5em;
+    width: 11.75em;
+  }
+}
